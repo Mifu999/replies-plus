@@ -1,0 +1,56 @@
+{
+	"geode": "5.7.1",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "cdc.replies",
+	"name": "Replies",
+	"version": "v1.1.0",
+	"developer": "cdc",
+	"description": "A mod that adds replying to comments.",
+	"resources": {
+		"spritesheets": {
+			"replySheet_001":[
+				"resources/reply-1.png",
+				"resources/reply-2.png",
+				"resources/reply-3.png"
+			]
+		}
+	},
+	"settings": {
+		"coloured-branches": {
+			"name": "Coloured branches",
+			"description": "Whether the reply branches should be coloured based on the depth.",
+			"type": "bool",
+			"default": false
+		},
+		"date-display": {
+			"name": "Date Display",
+			"description": "How the date is shown on each cell.\n<cy>Relative</c> is the vanilla \"2 months ago\".\n<cy>Exact</c> shows a real calendar date.\n<cy>Exact + relative</c> shows both.\n\nReplies posted through the mod always carry an exact timestamp. The root comment only has one if <cg>RobTop's server</c> sent it; when it didn't, the relative string is used instead.",
+			"type": "string",
+			"default": "Relative",
+			"one-of": ["Relative", "Exact", "Exact + relative"]
+		},
+		"date-include-time": {
+			"name": "Include Time of Day",
+			"description": "Adds the hour and minute to exact dates (<cy>2026-09-19 14:32</c> instead of <cy>2026-09-19</c>). Has no effect while <cl>Date Display</c> is set to <cy>Relative</c>.",
+			"type": "bool",
+			"default": false
+		},
+		"show-reply-ids": {
+			"name": "Show Reply IDs",
+			"description": "Shows the ID of each reply next to its date. Long IDs are shortened on the cell — the full value is in the info popup.",
+			"type": "bool",
+			"default": false
+		},
+		"info-popup": {
+			"name": "Clickable Date",
+			"description": "Makes the date line on each cell open a <cl>Reply Info</c> popup with the full ID, both local and UTC timestamps, the author's account ID and a copy button.",
+			"type": "bool",
+			"default": true
+		}
+	}
+}
